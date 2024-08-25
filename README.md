@@ -23,15 +23,15 @@ Keywords: Whole-body Motion Generation, Multimodal Controls, Text-to-Motion, Mus
 
 - [MotionCraft](#motioncraft)
   - [TODO](#todo)
-  - [🧭 Method Overview](#-method-overview)
+  - [🧭 Overview](#-overview)
   - [🛠️ Paper Abstract](#️-paper-abstract)
   - [🚀 Getting Started](#-getting-started)
     - [Environment Requirement 🌍](#environment-requirement-)
     - [Data Download ⬇️](#data-download-️)
   - [🏃🏼 Running Scripts](#-running-scripts)
-    - [Training 🤯](#training-)
-    - [Visualization 📜](#visualization-)
     - [Evaluation 📏](#evaluation-)
+    - [Visualization 📜](#visualization-)
+    - [Training 🤯](#training-)
   - [🤝🏼 Cite Us](#-cite-us)
   - [💖 Acknowledgement](#-acknowledgement)
 
@@ -263,8 +263,8 @@ The code is coming soon!
 ## 🤝🏼 Cite Us
 
 ```
-@article{bian2024adding,
-  title={Adding Multi-modal Controls to Whole-body Human Motion Generation},
+@article{bian2024motioncraft,
+  title={MotionCraft: Crafting Whole-Body Motion with Plug-and-Play Multimodal Controls},
   author={Bian, Yuxuan and Zeng, Ailing and Ju, Xuan and Liu, Xian and Zhang, Zhaoyang and Liu, Wei and Xu, Qiang},
   journal={arXiv preprint arXiv:2407.21136},
   year={2024}
