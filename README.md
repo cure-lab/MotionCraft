@@ -2,7 +2,7 @@
 
 This repository contains the implementation of the paper "MotionCraft: Crafting Whole-Body Motion with Plug-and-Play Multimodal Controls"
 
-Keywords: Motion Generation, Multimodal Controls
+Keywords: Whole-body Motion Generation, Multimodal Controls, Text-to-Motion, Music-to-Dance, Speech-to-Gesture 
 
 > [Yuxuan Bian](https://yxbian23.github.io/)<sup>1</sup>, [Ailing Zeng](https://ailingzeng.site/)<sup>2*</sup>, [Xuan Ju](https://github.com/juxuan27)<sup>1</sup>, [Xian Liu](https://alvinliu0.github.io/)<sup>1</sup>, [Zhaoyang Zhang](https://zzyfd.github.io/#/)<sup>1</sup>, [Wei Liu](https://scholar.google.com.hk/citations?hl=zh-CN&user=AjxoEpIAAAAJ)<sup>2</sup>, [Qiang Xu](https://cure-lab.github.io/)<sup>1*</sup><br>
 > <sup>1</sup>The Chinese University of Hong Kong <sup>2</sup>Tencent <sup>*</sup>Corresponding Author
@@ -44,7 +44,7 @@ Keywords: Motion Generation, Multimodal Controls
 - [ ] Release checkpoints
 - [ ] Release gradio demo
 
-## 🧭 Method Overview
+## 🧭 Overview
 We present MotionCraft, a diffusion transformer that crafts whole-body motion with plug-and-play multimodal controls, encompassing robust motion generation abilities including Text-to-Motion, Speech-to-Gesture, and Music-to-Dance.
 ![](./assets/imgs/1-teaser.png)
 
@@ -97,7 +97,7 @@ pip install -r requirements.txt
 
 **Dataset**
 
-You can download the all the original motion datasets and process them into the MC-Bench as follows, which are used for training and testing the BrushNet. By downloading the data, you are agreeing to the terms and conditions of the license. The data structure should be like:
+You can download all the original motion datasets and process them into the MC-Bench as follows, which are used for training and testing the BrushNet. By downloading the data, you are agreeing to the terms and conditions of the license. The data structure should be like:
 
 ```
 |-- data
@@ -197,7 +197,7 @@ Noted: *Due to dataset license limitation, we can not redistribute the processed
 <details> <summary> Music-to-Dance Benchmark Construction </summary>
 
 * Download and organize the data as [FineDance](https://github.com/li-ronghui/FineDance?tab=readme-ov-file):
-  * label_json: contains the song name, coarse style and fine-grained genre.
+  * label_json: contains the song name, coarse style, and fine-grained genre.
   * motion: contains the SMPLH format motion data.
   * music_wav: contains the music data in 'wav' format.
   * music_npy: contains the music feature extracted by librosa follow AIST++
@@ -225,12 +225,20 @@ Checkpoints are coming soon.
 
 ## 🏃🏼 Running Scripts
 
+### Evaluation 📏
 
-### Training 🤯
+You can evaluate using the script:
 
-Code is coming soon!
+```
+# text-to-motion
+bash ./tools/single_test.sh
+# speech-to-gesture
+bash ./tools/s2g_test.sh
+# music-to-dance
+bash ./tools/m2d_test.sh
+```
 
-
+Noted: *For detailed usage of the parameters, please refer to [test.py](tools/test.py), [s2g_test.py](tools/s2g_test.py), and [m2d_test.py](tools/m2d_test.py) respectively.*
 
 ### Visualization 📜
 
@@ -247,22 +255,10 @@ bash ./tools/m2d_visualize.sh
 
 Noted: *For detailed usage of the parameters, please refer to [visualize.py](tools/visualize.py), [s2g_visualize.py](tools/s2g_visualize.py), and [m2d_visualize.py](tools/m2d_visualize.py) respectively.*
 
-### Evaluation 📏
 
-You can evaluate using the script:
+### Training 🤯
 
-```
-# text-to-motion
-bash ./tools/single_test.sh
-# speech-to-gesture
-bash ./tools/s2g_test.sh
-# music-to-dance
-bash ./tools/m2d_test.sh
-```
-
-Noted: *For detailed usage of the parameters, please refer to [test.py](tools/test.py), [s2g_test.py](tools/s2g_test.py), and [m2d_test.py](tools/m2d_test.py) respectively.*
-
-
+The code is coming soon!
 
 ## 🤝🏼 Cite Us
 
