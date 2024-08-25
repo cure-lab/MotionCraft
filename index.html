@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+  <!-- Standard metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MotionCraft</title>
+  <meta name="author" content="Yuxuan Bian" />
+  <meta name="description" content="MotionCraft: Crafting Whole-Body Motion with Plug-and-Play Multimodal Controls" />
+  <meta name="keywords" content="MotionCraft " />
+
+  <!-- Google Search Verification -->
+  <!-- <meta name="google-site-verification" content="aF7wSOljWeE2IT3HvAhPwdnNxup1zdKCrFf50yCFMoE" /> -->
+
+  <!-- Bootstrap & MDB -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
+    integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous" />
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
+    integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css"
+    integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+  <!-- Code Syntax Highlighting -->
+  <link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+  <!-- Styles -->
+  <link rel="icon" href="./assets/img/web.png">
+  <link rel="stylesheet" href="./assets/css/main.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHPFHC4JTP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VHPFHC4JTP');
+  </script>
+</head>
+
+<!-- Body -->
+
+<body>
+
+  <!-- Content -->
+  <div class="container project_container mt-5">
+    <!---------------------------- HEADER ---------------------------->
+    <header class="project-title" style="text-align: center; ">
+      <!-- <h1 class="project-title" style="font-weight: bold; color: #404040"> <img src="./assets/img/Tomato.png"
+          style="height:5%; width:5%">MotionCraft: Crafting Whole-Body Motion with Plug-and-Play Multimodal Controls</h1> -->
+      <h1 class="project-title" style="font-weight: bold; color: #404040">
+        <img src="./assets/img/web.png" style="height:5%; width:5%">
+        MotionCraft: Crafting Whole-Body Motion with Plug-and-Play Multimodal Controls</h1>
+      <h3>
+        <a href="https://yxbian23.github.io/" target="_blank" rel="noopener noreferrer">Yuxuan Bian</a><sup>1</sup>,
+        <a href="https://ailingzeng.site" target="_blank" rel="noopener noreferrer">Ailing Zeng</a><sup># 2</sup>,
+        <a href="https://juxuan27.github.io/" target="_blank" rel="noopener noreferrer">Xuan Ju</a><sup>1</sup>,
+        <a href="https://alvinliu0.github.io/" target="_blank" rel="noopener noreferrer">Xian Liu</a><sup>1</sup>,
+        <a href="https://zzyfd.github.io/#/" target="_blank" rel="noopener noreferrer">Zhaoyang Zhang</a><sup>1</sup>,
+        <a href="https://scholar.google.com/citations?user=AjxoEpIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Wei Liu</a><sup>2</sup>,
+        and
+        <a href="https://cure-lab.github.io/" target="_blank"
+          rel="noopener noreferrer">Qiang Xu</a><sup># 1</sup>
+      </h3>
+      <h5><sup>#</sup><i>Corresponding Authors.</i></h5>
+      <h5><sup>1</sup>The Chinese University of Hong Kong, <sup>2</sup>Tencent
+      </h5>
+      
+      <video width="55%" controls>
+        <source src="./assets/img/1-min-demo.mp4" type="video/webm">
+      </video>
+      <!-- <img src="./assets/img/1-min-demo.mp4" style="width: 55%;"> -->
+
+      <div class="publications project-links">
+        <a href="http://arxiv.org/abs/2407.21136" class="btn" role="button" target="_blank" rel="noopener noreferrer">arXiv</a>
+        <a href="http://arxiv.org/pdf/2407.21136" class="btn" role="button" target="_blank" rel="noopener noreferrer">PDF</a>
+        <a href="https://cure-lab.github.io/MotionCraft/" class="btn" role="button" target="_blank" rel="noopener noreferrer">Video</a>
+        <a href="https://github.com/cure-lab/MotionCraft" class="btn" role="button" target="_blank" rel="noopener noreferrer">Code</a>
+        <a href="https://github.com/cure-lab/MotionCraft?tab=readme-ov-file#data-download-%EF%B8%8F" class="btn" role="button" target="_blank" rel="noopener noreferrer">Data</a>
+        <!-- <a href="https://swanhub.co/demo/Evan/OpenTMR" class="btn" role="button" target="_blank" rel="noopener noreferrer">Motion Retrieval (SwanHub)</a> -->
+        <!-- <a href="" class="btn" role="button" target="_blank" rel="noopener noreferrer">Demo (Coming soon)</a> -->
+
+      </div>
+      <br>
+
+
+    </header>
+
+    <!---------------------------- ABSTRACT ---------------------------->
+    <div class="h-100 d-flex align-items-center justify-content-center" style="margin-top: 30px">
+      <div class="project-narrow" id="abstract" style="text-align: justify;">
+        <h3 style="text-align: center;">Abstract</h3>
+        <i>
+          Whole-body multimodal motion generation, controlled by text, speech, or music, has numerous applications including video generation and character animation. 
+          However, employing a unified model to achieve various generation tasks with different condition modalities presents two main challenges: motion distribution drifts across different tasks (e.g., co-speech gestures and text-driven daily actions) and the complex optimization of mixed conditions with varying granularities (e.g., text and audio). Additionally, inconsistent motion formats across different tasks and datasets hinder effective training toward multimodal motion generation.
+          In this paper, we propose <b><i>MotionCraft</i></b>, a unified diffusion transformer that crafts whole-body motion with plug-and-play multimodal control. 
+          Our framework employs a coarse-to-fine training strategy, starting with the first stage of text-to-motion semantic pre-training, followed by the second stage of multimodal low-level control adaptation to handle conditions of varying granularities. 
+          To effectively learn and transfer motion knowledge across different distributions, we design <b><i>MC-Attn</i></b> for parallel modeling of static and dynamic human topology graphs. 
+          To overcome the motion format inconsistency of existing benchmarks, we introduce <b><i></i>MC-Bench</i></b>, the first available multimodal whole-body motion generation benchmark based on the unified SMPL-X format. 
+          Extensive experiments show that <b><i>MotionCraft</i></b> achieves state-of-the-art performance on various standard motion generation tasks.
+        </i>
+      </div>
+    </div>
+
+
+
+    <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center;">Our Main Contribution</h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" aria-labelledby="h36m-list"
+          style="padding: 0px !important">
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="switch_eg_1" role="tabpanel">
+                <img src="./assets/img/1-teaser.png" style="width: 100%;">
+                <!-- <iframe src="./assets/img/highlight.jpeg" width="100%" height="100%"></iframe> -->
+                <p style="margin:10px; text-align: justify;">
+                  We present <b><i>MotionCraft</i></b>, a diffusion transformer that crafts whole-body motion with plug-and-play multimodal controls, encompassing robust motion generation abilities including Text-to-Motion, Speech-to-Gesture, and Music-to-Dance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center; margin-bottom:20px">Multimodal Video Generation Application with Our
+        Generated Motions
+      </h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" style="padding: 0px !important">
+          <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="dropdown list-group">
+              <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="h36m-btn"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="selection">Speech-Condition</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
+                <a class="dropdown-item dropdown-item-action" href="#Speech-Condition" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="Speech-Condition">Speech-Condition</a>
+                <a class="dropdown-item dropdown-item-action" href="#Music-Condition" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="Music-Condition">Music-Condition</a>
+                <!-- <a class="dropdown-item dropdown-item-action" href="#case-3" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="case-3">case-3</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="Speech-Condition" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Speech Segment1</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/app/speech-1-messe.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Speech Segment2</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/app/speech-2-messe.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="Music-Condition" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Music Clip1</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/app/dance-1-mimic.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Music Clip2</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/app/dance-2-mimic.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+
+
+                <!-- <p style="text-align: center; color:purple"><b><i>A person is giving a speech, and the content is ...</i></b></p> -->
+              </div>
+              <p style="text-align: justify; margin: 10px;">
+                Our generated motion sequences can be combined with any off-the-shelf human video generation framework, such as <a href="https://github.com/Tencent/MimicMotion">MimicMotion</a>, <a href="https://github.com/HumanAIGC/AnimateAnyone">AnimateAnyone</a>, and <a href="https://github.com/Kelu007/VividPose">VividPose</a>, enabling users to customize videos of any character based on specific control signals, such as speech or music. 
+                Notably, unlike the traditional 2D keypoints estimated from videos, our generated 3D motion approach allows for flexible adjustment of camera parameters to project different visible body regions (e.g., full body or upper body)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center;">System Overview</h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" aria-labelledby="h36m-list"
+          style="padding: 0px !important">
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="switch_eg_1" role="tabpanel">
+                <img src="./assets/img/3-method.png" style="width: 100%;">
+                <!-- <iframe src="./assets/img/3-method.pdf" width="100%" height="100%"></iframe> -->
+                <p style="margin:10px; text-align: justify;">
+                  Architecture of <b><i>MotionCraft</i></b>. <b><i>MotionCraft</i></b> is a transformer-based diffusion model. 
+                  In the first stage, <b><i>MotionCraft</i></b> uses texts as a semantic control guide to learn coarse-grained cross-scenario motion knowledge across multiple datasets; in the second stage, <b><i>MotionCraft</i></b> freezes the backbone while adding a plug-and-play control branch to learn the different low-level control signals.
+                  The core of <b><i>MotionCraft</i></b> is  <b><i>MC-Attn</i></b>, which optimizes the representation of motion token sequences by capturing the spatial properties of dynamic and static human topology graphs and learning temporal relationships in parallel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center;">Demo Video of Motion Generation Tasks</h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" aria-labelledby="h36m-list"
+          style="padding: 0px !important">
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="switch_eg_1" role="tabpanel">
+                <video width="100%" controls>
+                  <source src="./assets/img/Comparison.mp4" type="video/webm">
+                </video>
+                <!-- <iframe src="./assets/img/highlight.jpeg" width="100%" height="100%"></iframe> -->
+                <!-- <p style="margin:10px; text-align: justify;">
+                  We present <b><i>MotionCraft</i></b>, a diffusion transformer that crafts whole-body motion with plug-and-play multimodal controls, encompassing robust motion generation abilities including Text-to-Motion, Speech-to-Gesture, and Music-to-Dance.
+                </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div style="text-align: center; margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center;">OpenTMR: Open-sourced Motion Retrieval Model</h3>
+    </div> -->
+  </div>
+    <!-- <iframe
+      src="https://evan-opentmr.demo.swanhub.co"
+      frameborder="0"
+      width=70%
+      height="900"
+    style="text-align: center; margin-left:15%;"
+    ></iframe> -->
+  <div class="container project_container mt-5">
+    <!-- <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center; margin-bottom:20px">Comparing with GT
+      </h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" aria-labelledby="h36m-list"
+          style="padding: 0px !important">
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="perform" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">HumanTOMATO</a>
+                    <img class="gif" src="assets/img/wgt/ours.gif">
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ground Truth (GT)</a>
+                    <img class="gif" src="assets/img/wgt/gt.gif">
+                  </div>
+                </div>
+
+                <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>Ground Truth (GT)</a>
+                </div>
+                <img class="gif" src="assets/img/wgt/ours.gif" style='width:49%'>
+                <img class="gif" src="assets/img/wgt/gt.gif" style='width:49%'>
+
+                <p style="text-align: center; color:purple"><b><i>man swivels left to right with left hand up towards
+                      the
+                      face.</i></b></p>
+              </div>
+              <p style="text-align: justify; margin: 10px;">We found that the generated results of HumanTOMATO
+                were even more <b><i>vivid</i></b> than GT.
+                When scratching his face, the man <b><i>even stretch out his index finger</i></b>. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+    <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center; margin-bottom:20px">Comparing with Baselines in Text2Motion
+      </h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" style="padding: 0px !important">
+          <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="dropdown list-group">
+              <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="h36m-btn"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="selection">T2M-case-1</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-1" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-1">T2M-case-1</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-2" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-2">T2M-case-2</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-3" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-3">T2M-case-3</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-4" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-4">T2M-case-4</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-5" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-5">T2M-case-5</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-6" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-6">T2M-case-6</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-7" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-7">T2M-case-7</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-8" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-8">T2M-case-8</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-9" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-9">T2M-case-9</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-10" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-10">T2M-case-10</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-11" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-11">T2M-case-11</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-12" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-12">T2M-case-12</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-13" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-13">T2M-case-13</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-14" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-14">T2M-case-14</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-15" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-15">T2M-case-15</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-16" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-16">T2M-case-16</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-17" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-17">T2M-case-17</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-18" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-18">T2M-case-18</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-19" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-19">T2M-case-19</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-20" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-20">T2M-case-20</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-21" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-21">T2M-case-21</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-22" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-22">T2M-case-22</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-23" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-23">T2M-case-23</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-24" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-24">T2M-case-24</a>
+                <a class="dropdown-item dropdown-item-action" href="#T2M-case-25" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="T2M-case-25">T2M-case-25</a>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="T2M-case-1" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/1-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/1-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/1-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>T2M-GPT</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                </div>
+                <img class="gif" src="assets/img/baseline/back-gpt.gif" style='width:49%'>
+                <img class="gif" src="assets/img/baseline/back-ours.gif" style='width:49%'>
+                 -->
+                <p style="text-align: center; color:purple"><b><i>Text-aligned natural motions: the figure walks forward and looks like he trips on something.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-2" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/2-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/2-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/2-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>T2M-GPT</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                </div>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-gpt.gif" style='width:49%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-ours.gif" style='width:49%'> -->
+
+                <p style="text-align: center; color:purple"><b><i>Precise motion counting: a person does 2 jumping jacks.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-3" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/3-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/3-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/3-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>T2M-GPT</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                </div>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-gpt.gif" style='width:49%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-ours.gif" style='width:49%'> -->
+
+                <p style="text-align: center; color:purple"><b><i>High-quality motions with less foot sliding: a person does a squat and raises both arms over its head.</i></b></p>
+              </div>
+              
+              <div class="tab-pane fade" id="T2M-case-4" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/4-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/4-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/4-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person walks forward, arms by their side.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-5" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/5-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/5-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/5-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person lifts up a box on the right side and puts it on the left side.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-6" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/6-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/6-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/6-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person jogging in place.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-7" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/7-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/7-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/7-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person uses their right arm to wave.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-8" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/8-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/8-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/8-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person walks in a right bend direction.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-9" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/9-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/9-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/9-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person sits in a chair then stands back up.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-10" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/10-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/10-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/10-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person does a small jump.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-11" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/11-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/11-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/11-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person kneels down on both knees.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-12" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/12-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/12-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/12-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>the person is stretching arms out.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-13" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/13-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/13-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/13-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person stretched right arm up and over to the left, then left arm up and over to the right.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-14" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/14-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/14-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/14-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person raises both arms and punches with his right arm.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-15" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/15-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/15-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/15-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a step forward then a large step like walking over something then back to normal.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-16" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/16-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/16-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/16-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>the figure plants four steps leading with it's left foot, with a fifth step not planted.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-17" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/17-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/17-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/17-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person walks in place.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-18" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/18-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/18-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/18-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person leaps forward then stands straight.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-19" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/19-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/19-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/19-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person jobs up a few paces in a straight line and stops.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-20" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/20-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/20-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/20-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>he opened his both arms and then sit on the bench and then start moving his right hand.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-21" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/21-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/21-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/21-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person strides swiftly in a straight line.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-22" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/22-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/22-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/22-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>he stomps his left feet.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-23" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/23-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/23-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/23-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person makes several gestures with their hands, appear to scratch, stretch their arms and wave their arms around while twisting their torso.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-24" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/24-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/24-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/24-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>a person is jumping up and down.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="T2M-case-25" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineMoGen</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/25-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/25-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_squat_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/t2m/25-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>the person is scratching head.</i></b></p>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+              <p style="text-align: justify; margin: 10px;">We compare the generation result of <b><i>MotionCraft</i></b> with
+                baselines.
+                Our model has obvious advantages in controlibility, sequentiality and motion rationality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center; margin-bottom:20px">Comparing with Baselines in Speech2Gesture
+      </h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" style="padding: 0px !important">
+          <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="dropdown list-group">
+              <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="h36m-btn"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="selection">S2G-case-1</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
+                <a class="dropdown-item dropdown-item-action" href="#S2G-case-1" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="S2G-case-1">S2G-case-1</a>
+                <a class="dropdown-item dropdown-item-action" href="#S2G-case-2" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="S2G-case-2">S2G-case-2</a>
+                <a class="dropdown-item dropdown-item-action" href="#S2G-case-3" id="h36m-dropdown" data-toggle="list"
+                role="tab" aria-controls="S2G-case-3">S2G-case-3</a>
+                <a class="dropdown-item dropdown-item-action" href="#S2G-case-4" id="h36m-dropdown" data-toggle="list"
+                role="tab" aria-controls="S2G-case-4">S2G-case-4</a>
+                <!-- <a class="dropdown-item dropdown-item-action" href="#case-3" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="case-3">case-3</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="S2G-case-1" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ground Truth</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/1-gt.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/1.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">EMAGE</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/emage-1.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/mcm-1.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>T2M-GPT</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                </div>
+                <img class="gif" src="assets/img/baseline/back-gpt.gif" style='width:49%'>
+                <img class="gif" src="assets/img/baseline/back-ours.gif" style='width:49%'>
+                 -->
+                <p style="text-align: center; color:purple"><b><i>A person is giving a speech, and the content is ...</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="S2G-case-2" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ground Truth</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/2-gt.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/2.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">EMAGE</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/emage-2.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/mcm-2.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>T2M-GPT</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                </div>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-gpt.gif" style='width:49%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-ours.gif" style='width:49%'> -->
+
+                <p style="text-align: center; color:purple"><b><i>A person is giving a speech, and the content is ...</i></b></p>
+              </div>
+              
+              <div class="tab-pane fade" id="S2G-case-3" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ground Truth</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/3-gt.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/3.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">EMAGE</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/emage-3.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/mcm-3.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>T2M-GPT</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                </div>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-gpt.gif" style='width:49%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-ours.gif" style='width:49%'> -->
+
+                <p style="text-align: center; color:purple"><b><i>A person is giving a speech, and the content is ...</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="S2G-case-4" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ground Truth</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/4-gt.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/4.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">EMAGE</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/emage-4.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/s2g/mcm-4.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>T2M-GPT</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                </div>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-gpt.gif" style='width:49%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/baseline/gorilla-ours.gif" style='width:49%'> -->
+
+                <p style="text-align: center; color:purple"><b><i>A person is giving a speech, and the content is ...</i></b></p>
+              </div>
+
+
+              <p style="text-align: justify; margin: 10px;">We compare the generation result of <b><i>MotionCraft</i></b> with
+                baselines.
+                Our model has obvious advantages in controlibility, sequentiality and motion rationality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center; margin-bottom:20px">Comparing with Baselines in Music2Dance
+      </h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" style="padding: 0px !important">
+          <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="dropdown list-group">
+              <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="h36m-btn"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="selection">M2D-case-1</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-1" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-1">M2D-case-1</a>
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-2" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-2">M2D-case-2</a>
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-3" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-3">M2D-case-3</a>
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-4" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-4">M2D-case-4</a>
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-5" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-5">M2D-case-5</a>
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-6" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-6">M2D-case-6</a>
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-7" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-7">M2D-case-7</a>
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-8" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-8">M2D-case-8</a>
+                <a class="dropdown-item dropdown-item-action" href="#M2D-case-9" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-9">M2D-case-9</a>
+                  <a class="dropdown-item dropdown-item-action" href="#M2D-case-10" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="M2D-case-10">M2D-case-10</a>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="M2D-case-1" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/1-finedance.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/1-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/1-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Street dance in the Breaking style to the rhythm of the Just_Begun.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="M2D-case-2" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/2-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/2-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/2-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Street dance in the Hiphop style to the rhythm of the idoit4.</i></b></p>
+              </div>
+              
+              <div class="tab-pane fade" id="M2D-case-3" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/3-finedance.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/3-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/3-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Mix dance in the Korean style to the rhythm of the killthislove.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="M2D-case-4" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/4-fine.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/4-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/4-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Street dance in the Hiphop style to the rhythm of the sevenFloul.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="M2D-case-5" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/5-finedance.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/5-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/5-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Street dance in the Jazz style to the rhythm of the PROBLEMA.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="M2D-case-6" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/6-finedance.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/6-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/6-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Street dance in the Jazz style to the rhythm of the wildfire.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="M2D-case-7" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/7-finedance.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/7-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/7-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Street dance in the Breaking style to the rhythm of the Just_Begun.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="M2D-case-8" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/8-finedance.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/8-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/8-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Mix dance in the Choreography style to the rhythm of the shuixingji.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="M2D-case-9" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/9-finedance.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/9-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/9-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Mix dance in the Korean style to the rhythm of the pinkvenom.</i></b></p>
+              </div>
+
+              <div class="tab-pane fade" id="M2D-case-10" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">FineDance</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/10-finedance.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">MCM</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_mcm.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/10-mcm.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 33%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Ours</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/baseline/m2d/10-our.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <p style="text-align: center; color:purple"><b><i>A dancer is performing a Mix dance in the Korean style to the rhythm of the dreamscometrue.</i></b></p>
+              </div>
+
+              <p style="text-align: justify; margin: 10px;">We compare the generation result of <b><i>MotionCraft</i></b> with
+                baselines.
+                Our model has obvious advantages in controlibility, sequentiality and motion rationality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center; margin-bottom:20px">Multimodal Video Generation Application with Our
+        Generated Motions
+      </h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" id="h36m" role="tabpanel" style="padding: 0px !important">
+          <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="dropdown list-group">
+              <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="h36m-btn"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="selection">Music-Condition</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
+                <a class="dropdown-item dropdown-item-action" href="#Music-Condition" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="Music-Condition">Music-Condition</a>
+                <a class="dropdown-item dropdown-item-action" href="#Speech-Condition" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="Speech-Condition">Speech-Condition</a>
+                <!-- <a class="dropdown-item dropdown-item-action" href="#case-3" id="h36m-dropdown" data-toggle="list"
+                  role="tab" aria-controls="case-3">case-3</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active gif" id="Music-Condition" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Music Clip1</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/app/dance-1-mimic.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Music Clip2</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/app/dance-2-mimic.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>T2M-GPT</a>
+                  <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>HumanTOMATO</a>
+                </div>
+                <img class="gif" src="assets/img/baseline/back-gpt.gif" style='width:49%'>
+                <img class="gif" src="assets/img/baseline/back-ours.gif" style='width:49%'>
+                 -->
+                <!-- <p style="text-align: center; color:purple"><b><i>A person is giving a speech, and the content is ...</i></b></p> -->
+              </div>
+
+              <div class="tab-pane fade" id="Speech-Condition" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Speech Segment1</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_trip_fine.webm" > -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/app/speech-1-messe.mp4" type="video/webm">
+                    </video>
+                  </div>
+                  <div style="width: 49%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Speech Segment2</a>
+                    <!-- <img class="webm" src="./assets/img/baseline/t2m_jump_our.webm"> -->
+                    <video width="100%" controls>
+                      <source src="./assets/img/app/speech-2-messe.mp4" type="video/webm">
+                    </video>
+                  </div>
+                </div>
+
+
+                <!-- <p style="text-align: center; color:purple"><b><i>A person is giving a speech, and the content is ...</i></b></p> -->
+              </div>
+            
+
+
+              <p style="text-align: justify; margin: 10px;">
+                Our generated motion sequences can be combined with any off-the-shelf human video generation framework, such as <a href="https://github.com/Tencent/MimicMotion">MimicMotion</a>, <a href="https://github.com/HumanAIGC/AnimateAnyone">AnimateAnyone</a>, and <a href="https://github.com/Kelu007/VividPose">VividPose</a>, enabling users to customize videos of any character based on specific control signals, such as speech or music. 
+                Notably, unlike the traditional 2D keypoints estimated from videos, our generated 3D motion approach allows for flexible adjustment of camera parameters to project different visible body regions (e.g., full body or upper body)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center; margin-bottom:20px">How does Motion-aware language prior help the motion
+        generation?
+      </h3>
+      <div class="justify-content-center list-group list-group-horizontal" id="list-tab" role="tablist">
+        <div class="list-group list-group-horizontal" style="max-width:600px">
+          <a class="list-group-item list-group-item-action active" data-toggle="list" href="#Whole-body" role="tab"
+            aria-controls="Whole-body" style="text-align: center;min-width: max-content">Whole-body</a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#Body-only" role="tab"
+            aria-controls="Body-only" style="text-align: center;">Body-only</a>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- <div class="tab-content figure" id="nav-tabContent" style="padding: 0px !important">
+      <div class="tab-pane fade show active" id="Whole-body" role="tabpanel" aria-labelledby="Whole-body"
+        style="padding: 0px !important">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+          <div class="dropdown list-group">
+            <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="h36m-btn"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="selection">Turn</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
+              <a class="dropdown-item dropdown-item-action" href="#Turn" id="h36m-dropdown" data-toggle="list"
+                role="tab" aria-controls="Turn">Turn</a>
+              <a class="dropdown-item dropdown-item-action" href="#Kick" id="h36m-dropdown" data-toggle="list"
+                role="tab" aria-controls="Kick">Kick</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 10px !important; margin-top:10px">
+          <div class="tab-content figure" id="nav-tabContent">
+            <div class="tab-pane fade show active gif" id="Turn" role="tabpanel">
+              <div style="display: flex; justify-content: space-around;">
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/o TMR</a>
+                  <img class="gif" src="./assets/img/tmr/180wotmr.gif" >
+                </div>
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/ TMR</a>
+                  <img class="gif" src="./assets/img/tmr/180wtmr.gif">
+                </div>
+              </div> -->
+
+              <!-- <div style="text-align: justify; width: 100%">
+                <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>w/o TMR</a>
+                <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>w/ TMR</a>
+              </div>
+              <img class="gif" src="./assets/img/tmr/180wotmr.gif" style='width:49%'>
+              <img class="gif" src="./assets/img/tmr/180wtmr.gif" style='width:49%'> -->
+              <!-- <p style="text-align: center; color:purple; clear: both;"><b><i>The man walks forward a couple steps, turns right 180
+                    degrees and then walks back.
+                  </i></b></p>
+            </div>
+            <div class="tab-pane fade" id="Kick" role="tabpanel">
+              <div style="display: flex; justify-content: space-around;">
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/o TMR</a>
+                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="./assets/img/tmr/kick-gpt.gif" >
+                </div>
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/ TMR</a>
+                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="./assets/img/tmr/kick-ours.gif">
+                </div>
+              </div> -->
+
+              <!-- <div style="width: 100%">
+                <a style='width:49%; display: inline-block; text-align: center'>w/o TMR</a>
+                <a style='width:49%; display: inline-block; text-align: center'>w/ TMR</a>
+              </div>
+              <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/kick-gpt.gif" style='width:49%'>
+              <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/kick-ours.gif" style='width:49%'>
+                 -->
+              <!-- <p style="text-align: center; color:purple"><b><i>a person performs a standing kick.</i></b></p>
+            </div>
+            <p style="text-align: justify; margin: 10px;">To explore how TMR helps the motion generation,
+              we perform our ablation on the Motion-X dataset first. Results show that motion-aware language prior can
+              understand the motion dynamic clues better
+              on sequentiality, directions, and dynamics. Our method helps the
+              text-motion alignment on whole-body motion generation.
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="tab-pane fade" id="Body-only" role="tabpanel" aria-labelledby="Body-only"
+        style="padding: 0px !important">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+          <div class="dropdown list-group">
+            <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="humaneva-btn"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="selection">clockwisely</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
+              <a class="dropdown-item dropdown-item-action" href="#clockwisely" id="humaneva-dropdown"
+                data-toggle="list" role="tab" aria-controls="clockwisely">clockwisely</a>
+              <a class="dropdown-item dropdown-item-action" href="#right" id="humaneva-dropdown" data-toggle="list"
+                role="tab" aria-controls="right">right</a>
+              <a class="dropdown-item dropdown-item-action" href="#jump" id="humaneva-dropdown" data-toggle="list"
+                role="tab" aria-controls="jump">jump</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 10px !important; margin-top:10px">
+          <div class="tab-content figure" id="nav-tabContent">
+
+            
+
+            <div class="tab-pane fade show active" id="clockwisely" role="tabpanel">
+              <div style="display: flex; justify-content: space-around;">
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/o TMR</a>
+                  <img class="gif" src="./assets/img/tmr/h3d/a_person_walks_clockwisely_t2m_gpt.gif">
+                </div>
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/ TMR</a>
+                  <img class="gif" src="./assets/img/tmr/h3d/a_person_walks_clockwisely.gif">
+                </div>
+              </div> -->
+
+              <!-- <div style="text-align: justify; width: 100%">
+                <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>w/o TMR</a>
+                <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>w/ TMR</a>
+              </div>
+              <img class="gif" src="./assets/img/tmr/h3d/a_person_walks_clockwisely_t2m_gpt.gif" style='width:49%'>
+              <img class="gif" src="./assets/img/tmr/h3d/a_person_walks_clockwisely.gif" style='width:49%'> -->
+
+              <!-- <p style="text-align: center; color:purple"><b><i>A person walks clockwise-ly.
+                  </i></b></p>
+            </div>
+
+            <div class="tab-pane fade" id="right" role="tabpanel">
+              <div style="display: flex; justify-content: space-around;">
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/o TMR</a>
+                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/h3d/a_person_walks_forward__turn_right__finally_turn_right_t2m_gpt.gif">
+                </div>
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/ TMR</a>
+                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/h3d/a_person_walks_forward__turn_right__finally_turn_right.gif">
+                </div>
+              </div> -->
+
+              <!-- <div style="text-align: justify; width: 100%">
+                <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>w/o TMR</a>
+                <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>w/ TMR</a>
+              </div>
+              <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/h3d/a_person_walks_forward__turn_right__finally_turn_right_t2m_gpt.gif"
+                style='width:49%'>
+              <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/h3d/a_person_walks_forward__turn_right__finally_turn_right.gif"
+                style='width:49%'> -->
+              <!-- <p style="text-align: center; color:purple"><b><i>a person walks forward, turn right, finally turn right.
+                  </i></b></p>
+            </div>
+
+            <div class="tab-pane fade" id="jump" role="tabpanel">
+              <div style="display: flex; justify-content: space-around;">
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/o TMR</a>
+                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/h3d/A_person_walks_forward_and_jump_twice_t2m_gpt.gif" >
+                </div>
+                <div style="width: 49%;">
+                  <a style="text-align: center; display: inline-block; width: 100%;">w/ TMR</a>
+                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/h3d/A_person_walks_forward_and_jump_twice.gif">
+                </div>
+              </div> -->
+
+              <!-- <div style="text-align: justify; width: 100%">
+                <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>w/o TMR</a>
+                <a style='text-align: justify;width:49%; display: inline-block; text-align: center'>w/ TMR</a>
+              </div>
+              <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/h3d/A_person_walks_forward_and_jump_twice_t2m_gpt.gif" style='width:49%'>
+              <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                data-src="./assets/img/tmr/h3d/A_person_walks_forward_and_jump_twice.gif" style='width:49%'> -->
+              <!-- <p style="text-align: center; color:purple"><b><i>A person walks forward and jump twice.
+                  </i></b></p>
+            </div>
+            <p style="text-align: justify; margin: 10px;">Additionally, our Motion-aware language prior also benefits
+              the body-only motion generation.
+              We take the T2M-GPT as a baseline and perform ablation on the HumanML3D dataset. The T2M-GPT model with
+              Motion-aware language prior is shown on the right side. Results show that our method also helps the
+              text-motion alignment on body-only motion generation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+    <!-- <div style="margin-top:50px; padding: 0px !important">
+      <h3 style="text-align: center; margin-bottom:20px">Examples of Motion Reconstruction
+      </h3>
+      <div tab-content figure>
+        <div class="tab-pane fade show active" role="tabpanel" style="padding: 0px !important">
+          <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="dropdown list-group">
+              <button class="btn dropdown-toggle" style="max-width:600px" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="selection">perform</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
+                <a class="dropdown-item dropdown-item-action" href="#perform1" data-toggle="list" role="tab"
+                  aria-controls="perform1">perform</a>
+                <a class="dropdown-item dropdown-item-action" href="#humanml" data-toggle="list" role="tab"
+                  aria-controls="humanml">humanml</a>
+                <a class="dropdown-item dropdown-item-action" href="#kungfu" data-toggle="list" role="tab"
+                  aria-controls="kungfu">kungfu</a>
+                <a class="dropdown-item dropdown-item-action" href="#music" data-toggle="list" role="tab"
+                  aria-controls="music">music</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 10px !important; margin-top:10px">
+            <div class="tab-content figure" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="perform1" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">GT</a>
+                    <img class="gif" src="./assets/img/recon/perform_000243_gt.gif">
+                  </div>
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Vanilla</a>
+                    <img class="gif" src="./assets/img/recon/perform_000243_vq.gif">
+                  </div>
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">H²VQ</a>
+                    <img class="gif" src="./assets/img/recon/perform_000243_h2vq.gif">
+                  </div>
+                </div> -->
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>GT</a>
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>Vanilla
+                    VQ</a>
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>H²VQ</a>
+                </div>
+                <img class="gif" src="assets/img/recon/perform_000243_gt.gif" style='width:32%'>
+                <img class="gif" src="assets/img/recon/perform_000243_vq.gif" style='width:32%'>
+                <img class="gif" src="assets/img/recon/perform_000243_h2vq.gif" style='width:32%'> -->
+              <!-- </div>
+
+              <div class="tab-pane fade" id="humanml" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">GT</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/humanml_000022_gt.gif">
+                  </div>
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Vanilla</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/humanml_000022_vq.gif">
+                  </div>
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">H²VQ</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/humanml_000022_h2vq.gif">
+                  </div>
+                </div> -->
+
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>GT</a>
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>Vanilla
+                    VQ</a>
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>H²VQ</a>
+                </div>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/humanml_000022_gt.gif" style='width:32%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/humanml_000022_vq.gif" style='width:32%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/humanml_000022_h2vq.gif" style='width:32%'> -->
+              <!-- </div>
+              <div class="tab-pane fade" id="kungfu" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">GT</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/kungfu_subset_0_000191_gt.gif">
+                  </div>
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Vanilla</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/kungfu_subset_0_000191_vq.gif">
+                  </div>
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">H²VQ</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/kungfu_subset_0_000191_h2vq.gif">
+                  </div>
+                </div> -->
+
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>GT</a>
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>Vanilla
+                    VQ</a>
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>H²VQ</a>
+                </div>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/kungfu_subset_0_000191_gt.gif" style='width:32%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/kungfu_subset_0_000191_vq.gif" style='width:32%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/kungfu_subset_0_000191_h2vq.gif" style='width:32%'> -->
+              <!-- </div>
+              <div class="tab-pane fade" id="music" role="tabpanel">
+                <div style="display: flex; justify-content: space-around;">
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">GT</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/music_subset_1_000027_gt.gif">
+                  </div>
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">Vanilla</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/music_subset_1_000027_vq.gif">
+                  </div>
+                  <div style="width: 32.9%;">
+                    <a style="text-align: center; display: inline-block; width: 100%;">H²VQ</a>
+                    <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                    data-src="assets/img/recon/music_subset_1_000027_h2vq.gif">
+                  </div>
+                </div> -->
+
+
+                <!-- <div style="text-align: justify; width: 100%">
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>GT</a>
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>Vanilla
+                    VQ</a>
+                  <a style='text-align: justify;width:32%; display: inline-block; text-align: center'>H²VQ</a>
+                </div>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/music_subset_1_000027_gt.gif" style='width:32%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/music_subset_1_000027_vq.gif" style='width:32%'>
+                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
+                  data-src="assets/img/recon/music_subset_1_000027_h2vq.gif" style='width:32%'> -->
+              <!-- </div>
+              <p style="text-align: justify; margin: 10px;">We take the motion reconstruction as the pretext task
+                to
+                verify why H²VQ is better than vanilla VQ.
+                As shown in the demos, our H²VQ has a lower reconstruction error than vanilla VQ.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="h-100 d-flex align-items-center justify-content-center" style="margin-top: 30px">
+      <div class="project-narrow" id="bibtex" style="text-align: justify;">
+        <h3 style="text-align: center;">Citation</h3>
+        <div class="bibtex">
+
+          <figure class="highlight">
+            <pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">MotionCraft</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">{MotionCraft: Crafting Whole-Body Motion with Plug-and-Play Multimodal Controls}</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">{Bian, Yuxuan, Zeng Ailing, Ju Xuan, Liu Xian, Zhang Zhaoyang, Liu Wei, and Xu Qiang}</span><span class="p">,</span>
+  <span class="na">journal</span><span class="p">=</span><span class="s">{arXiv preprint arXiv:2407.21136}</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">{2024}</span>
+<span class="p">}</span></code></pre>
+          </figure>
+
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <p style="text-align:right;font-size:small;">
+      The website template was adapted from <a href="https://lhchen.top/HumanTOMATO/">HumanTomato Project</a>.
+    </p>
+
+  </div>
+
+
+
+
+  <!-- JavaScripts -->
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha256-SyTu6CwrfOhaznYZPoolVw2rxoY7lKYKQvqbtqN93HI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
+    integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+  <!-- Mansory & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="./assets/js/mansory.js" type="text/javascript"></script>
+
+  <!-- Medium Zoom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"
+    integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="./assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script src="./assets/js/common.js"></script>
+
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  <script>
+    $(function () {
+      $(".dropdown-menu a").click(function () {
+        var selText = $(this).text();
+        $(this).parent().parent().find(".selection").html(selText);
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var lazyloadThrottleTimeout;
+
+      var elements = document.getElementsByClassName('dropdown-item');
+
+      function lazyload(event) {
+        if (lazyloadThrottleTimeout) {
+          clearTimeout(lazyloadThrottleTimeout);
+        }
+        img_id = this.text
+        img2 = $("#" + img_id + " img")
+        // .children("img")
+        console.log(img2)
+        for (var i = 0; i < img2.length; i++) {
+          img = img2.get(i)
+          if ($(img).hasClass('lazy')) {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            lazyloadThrottleTimeout = setTimeout(function () { }, 20);
+          }
+        }
+      }
+
+      Array.from(elements).forEach((element) => {
+        element.addEventListener('click', lazyload);
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      let videos = document.querySelectorAll('video.lazyload');
+      videos.forEach(function(video) {
+         video.src = video.dataset.src;
+      });
+   });
+  </script>
+</body>
+
+</html>
