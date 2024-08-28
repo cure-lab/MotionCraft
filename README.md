@@ -12,8 +12,8 @@ Keywords: Whole-body Motion Generation, Multimodal Controls, Text-to-Motion, Mus
   <a href="https://cure-lab.github.io/MotionCraft/">🌐Project Page</a> |
   <a href="https://arxiv.org/abs/2407.21136">📜Arxiv</a> |
   <a href="https://arxiv.org/pdf/2407.21136">📃PDF</a> |
-  <a href="https://github.com/cure-lab/MotionCraft">🗄️Data</a> |
-  <a href="https://cure-lab.github.io/MotionCraft/">📹Video</a>
+  <a href="https://github.com/cure-lab/MotionCraft?tab=readme-ov-file#data-download-%EF%B8%8F">🗄️Data</a> |
+  <a href="https://cure-lab.github.io/MotionCraft/assets/img/1-min-demo.mp4">📹Video</a>
 </p>
 
 
