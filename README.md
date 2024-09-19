@@ -40,8 +40,8 @@ Keywords: Whole-body Motion Generation, Multimodal Controls, Text-to-Motion, Mus
 
 - [x] Release evluation and visualization code
 - [x] Release MC-Bench pre-processing code
+- [x] Release checkpoints
 - [ ] Release trainig code
-- [ ] Release checkpoints
 - [ ] Release gradio demo
 
 ## 🧭 Overview
@@ -179,13 +179,14 @@ Noted: *Due to dataset license limitation, we can not redistribute the processed
 
 <details> <summary> Speech-to-Gesture Benchmark Construction </summary>
 
-* Clone the original BEAT2 dataset:
+* Clone the original BEAT2 dataset and unzip it in data/datasets/beats2/PantoMatrix:
   ```
   cd ./data/datasets/beats2
   git clone https://github.com/PantoMatrix/PantoMatrix.git
   cd PantoMatrix
   git lfs install
   git clone https://huggingface.co/datasets/H-Liu1997/BEAT2
+  unzip beat_v2.0.0.zip
   ```
 * Prepare relevant statistical metrics:
   ```
@@ -219,10 +220,23 @@ Noted: *Due to dataset license limitation, we can not redistribute the processed
 * Download our pre-trained [text-encoder and motion encoder](https://drive.google.com/drive/folders/1cy3tRnMpb1k-A3bX2rY4JlY8cMENPLZ2?usp=drive_link) and put them under [here](./data/evaluators/smplx322) for evaluation.
 </details>
 
+
 **Checkpoints**
+We have prepared [three checkpoints](https://drive.google.com/drive/folders/1cY7JFtmqBEsI2R_UKcIzxcsLETw1OXwF?usp=drive_link) for Text-to-Motion, Speech-to-Gesture and Music-to-Dance respectively. You can do the following steps to place the ckpts in the right directory and complete the evaluation and visualization.
+```
+  # Dowloading
+  mkdir outputs
+  gdown –folder https://drive.google.com/drive/folders/1cY7JFtmqBEsI2R_UKcIzxcsLETw1OXwF
+  # Evaluation
+  bash tools/single_test.sh
+  bash tools/s2g_test.sh
+  bash tools/m2d_test.sh
+  # Visualization
+  bash tools/visualize.sh
+  bash tools/m2d_visualize.sh
+  bash tools/s2g_visualize.sh
 
-Checkpoints are coming soon.
-
+```
 ## 🏃🏼 Running Scripts
 
 ### Evaluation 📏
@@ -253,7 +267,7 @@ bash ./tools/s2g_visualize.sh
 bash ./tools/m2d_visualize.sh
 ```
 
-Noted: *For detailed usage of the parameters, please refer to [visualize.py](tools/visualize.py), [s2g_visualize.py](tools/s2g_visualize.py), and [m2d_visualize.py](tools/m2d_visualize.py) respectively.*
+Noted: *For detailed usage of the parameters, please refer to [visualize.py](tools/visualize.py), [s2g_visualize.py](tools/s2g_visualize.py), and [m2d_visualize.py](tools/m2d_visualize.py) respectively. You can also refer to the [TEMOS](https://github.com/Mathux/TEMOS?tab=readme-ov-file#rendering-motions-high_brightness) for the Blender visualization.*
 
 
 ### Training 🤯
