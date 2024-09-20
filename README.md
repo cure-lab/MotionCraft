@@ -221,22 +221,29 @@ Noted: *Due to dataset license limitation, we can not redistribute the processed
 </details>
 
 
-**Checkpoints**
+<details> <summary> Model Checkpoints </summary>
+
 We have prepared [three checkpoints](https://drive.google.com/drive/folders/1cY7JFtmqBEsI2R_UKcIzxcsLETw1OXwF?usp=drive_link) for Text-to-Motion, Speech-to-Gesture and Music-to-Dance respectively. You can do the following steps to place the ckpts in the right directory and complete the evaluation and visualization.
 ```
-  # Dowloading
-  mkdir outputs
-  gdown –folder https://drive.google.com/drive/folders/1cY7JFtmqBEsI2R_UKcIzxcsLETw1OXwF
-  # Evaluation
-  bash tools/single_test.sh
-  bash tools/s2g_test.sh
-  bash tools/m2d_test.sh
-  # Visualization
-  bash tools/visualize.sh
-  bash tools/m2d_visualize.sh
-  bash tools/s2g_visualize.sh
-
+# Dowloading
+mkdir outputs
+gdown –folder https://drive.google.com/drive/folders/1cY7JFtmqBEsI2R_UKcIzxcsLETw1OXwF
+# Evaluation
+bash tools/single_test.sh
+bash tools/s2g_test.sh
+bash tools/m2d_test.sh
+# Visualization
+bash tools/visualize.sh
+bash tools/m2d_visualize.sh
+bash tools/s2g_visualize.sh
 ```
+Noted: 
+* For ease of use, the provided checkpoints for S2G and M2D have merged both the control branch and the main network. The backbone of the M2D checkpoint is the T2M checkpoint provided. For S2G, we observed that increasing the number of parameters helps stabilize performance, so a version with more parameters is provided.
+* The naming convention of different checkpoints, such as epoch_x.pth, indicates the number of training epochs for each subtask. Variations in numbers arise from differences in task difficulty and dataset size.
+</details>
+
+</details>
+
 ## 🏃🏼 Running Scripts
 
 ### Evaluation 📏
